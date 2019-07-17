@@ -69,6 +69,10 @@ app.use('/web/jandan', require('./routes/web/jandan'))
 
 
 app.use(router)
-app.listen(3000)
-console.log('app start success at http://127.0.0.1:3000')
+
+let port = process.env.PORT || 3000
+app.listen(port)
+
+console.log('App listening on port:' + port)
+
 module.exports = app
