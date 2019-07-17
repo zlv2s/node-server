@@ -8,7 +8,7 @@
 
 **[仓库地址](https://github.com/zlv2s/node-server)**   
 
-**[Demo](https://infinite-refuge-92136.herokuapp.com/)**
+**[Demo](https://nodespider-api.herokuapp.com/)**
 
 ***
 
@@ -194,4 +194,4 @@ function httpPost(host, data, path, status) {
 
 ### 接口文档
 
-[文档地址](https://infinite-refuge-92136.herokuapp.com/docs)
+[文档地址](https://nodespider-api.herokuapp.com/docs)
