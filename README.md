@@ -1,5 +1,7 @@
 # Node Spider
 
+> 在[原作者](https://github.com/ecitlm/Node-SpliderApi)基础上修改，所有接口都测试正常返回数据
+
 **Node + Express 爬虫接口**
 
 > 基于 Node 的网络爬虫 API 接口 包括前端开发日报、kugou 音乐、前端 top 框架排行、搞笑视频、段子笑话、新闻资讯、热点详情接口数据
