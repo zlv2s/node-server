@@ -1,9 +1,3 @@
-/*
- * @Author: ecitlm
- * @Date:   2017-12-01 21:06:42
- * @Last Modified by: ecitlm
- * @Last Modified time: 2018-06-29 22:13:07
- */
 const express = require('express')
 const cheerio = require('cheerio')
 const app = express()

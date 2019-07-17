@@ -1,9 +1,3 @@
-/*
- * @Author: ecitlm
- * @Date:   2017-12-01 09:48:25
- * @Last Modified by: ecitlm
- * @Last Modified time: 2018-04-14 23:32:07
- */
 // 歌手分类
 const express = require('express')
 const app = express()

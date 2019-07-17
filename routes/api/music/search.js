@@ -1,9 +1,3 @@
-/*
- * @Author: ecitlm
- * @Date:   2017-12-01 10:29:20
- * @Last Modified by: ecitlm
- * @Last Modified time: 2018-04-14 23:31:59
- */
 const express = require('express')
 const app = express()
 const Server = require('../../../utils/httpServer')

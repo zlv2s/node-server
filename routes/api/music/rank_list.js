@@ -1,9 +1,3 @@
-/*
- * @Author: ecitlm
- * @Date:   2017-11-30 23:12:53
- * @Last Modified by: ecitlm
- * @Last Modified time: 2018-04-14 23:31:52
- */
 // 音乐排行榜
 const express = require('express')
 const app = express()

@@ -1,10 +1,3 @@
-/*
- * @Author: ecitlm
- * @Date:   2017-12-01 08:57:07
- * @Last Modified by: ecitlm
- * @Last Modified time: 2018-04-14 23:33:04
- */
-
 // 音乐详情信息
 const express = require('express')
 const app = express()

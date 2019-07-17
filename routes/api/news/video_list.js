@@ -1,9 +1,3 @@
-/*
- * @Author: ecitlm
- * @Date:   2017-12-06 22:59:30
- * @Last Modified by: ecitlm
- * @Last Modified time: 2018-04-14 23:33:47
- */
 const express = require('express')
 const http = require('http')
 const app = express()

@@ -1,10 +1,3 @@
-/*
- * @Author: ecitlm
- * @Date:   2017-12-01 09:06:42
- * @Last Modified by: ecitlm
- * @Last Modified time: 2018-04-14 23:31:28
- */
-
 // 音乐歌单下的音乐列表
 const express = require('express')
 const app = express()
