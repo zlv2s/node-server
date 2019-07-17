@@ -17,7 +17,7 @@
 $ git clone https://github.com/ecitlm/Node-SpliderApi.git
 
 $ npm install
-  ### 运行
+
 $ node app.js
 ```
 
@@ -25,55 +25,60 @@ $ node app.js
 
 浏览器打开`http://localhost:3000/docs` 可以查看所有接口文档
 
+
 **接口文件**
 
 ```txt
-├─api
-│  ├─it
-│  │      daily_info.js
-│  │      daily_list.js
-│  │      web_frame.js
-│  │
-│  ├─job
-│  │      job_info.js
-│  │      job_list.js
-│  │
-│  ├─joke
-│  │      joke_img.js
-│  │      joke_list.js
-│  │      joke_photo.js
-│  │
-│  ├─music
-│  │      new_songs.js
-│  │      plist.js
-│  │      plist_songs.js
-│  │      rank_list.js
-│  │      rank_list_info.js
-│  │      search.js
-│  │      singer_classify.js
-│  │      singer_info.js
-│  │      singer_list.js
-│  │      song_info.js
-│  │      song_lrc.js
-│  │
-│  ├─news
-│  │      news_detail.js
-│  │      news_list.js
-│  │      video_list.js
-│  │
-│  └─photo
-│          huaban.js
-│          jandan.js
-│          photo_list.js
-│          photo_type.js
-│          photo_view.js
-│
-└─web
-        daily_info.js
-        daily_list.js
-        index.js
-        jandan.js
-        photo.js
+├── api
+│   ├── echo
+│   │   └── music.js
+│   ├── goods
+│   │   ├── goods_list.js
+│   │   ├── lunbo_pic.js
+│   │   └── main_lunbo.js
+│   ├── it
+│   │   ├── daily_info.js
+│   │   ├── daily_list.js
+│   │   └── web_frame.js
+│   ├── job
+│   │   ├── job_info.js
+│   │   └── job_list.js
+│   ├── joke
+│   │   ├── joke_img.js
+│   │   ├── joke_list.js
+│   │   └── joke_photo.js
+│   ├── music
+│   │   ├── new_songs.js
+│   │   ├── plist.js
+│   │   ├── plist_songs.js
+│   │   ├── rank_list.js
+│   │   ├── rank_list_info.js
+│   │   ├── search.js
+│   │   ├── singer_classify.js
+│   │   ├── singer_info.js
+│   │   ├── singer_list.js
+│   │   ├── song_info.js
+│   │   └── song_lrc.js
+│   ├── news
+│   │   ├── news_detail.js
+│   │   ├── news_list.js
+│   │   ├── video_list.js
+│   │   ├── zhihu_news.js
+│   │   └── zhihu_news_detail.js
+│   ├── photo
+│   │   ├── huaban.js
+│   │   ├── huaban_data.json
+│   │   └── jandan.js
+│   └── qq_music
+│       ├── recommend.js
+│       └── song_info.js
+└── web
+    ├── daily_info.js
+    ├── daily_list.js
+    ├── index.js
+    ├── jandan.js
+    └── photo.js
+
 ```
 
 **网络请求封装 `httpServer.js`**
