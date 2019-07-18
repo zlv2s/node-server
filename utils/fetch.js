@@ -1,9 +1,3 @@
-/*
- * @Author: ecitlm
- * @Date:   2017-12-03 20:31:17
- * @Last Modified by: ecitlm
- * @Last Modified time: 2018-06-29 22:18:22
- */
 const axios = require('axios')
 const qs = require('qs')
 let instance = axios.create({
