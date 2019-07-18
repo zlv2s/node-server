@@ -1,7 +1,7 @@
 const axios = require('axios')
 const qs = require('qs')
 let instance = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: `http://localhost:${process.env.PORT || 3000}`,
   timeout: 60 * 1000
 })
 
@@ -19,7 +19,7 @@ instance.interceptors.request.use(
   }
 )
 
-function get (url, params) {
+function get(url, params) {
   return new Promise((resolve, reject) => {
     instance
       .get(url, params)
@@ -37,7 +37,7 @@ function get (url, params) {
   })
 }
 
-function post (url, params) {
+function post(url, params) {
   return new Promise((resolve, reject) => {
     instance
       .post(url, params)
