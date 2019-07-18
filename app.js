@@ -70,9 +70,9 @@ app.use('/web/jandan', require('./routes/web/jandan'))
 
 app.use(router)
 
-let port = process.env.PORT || 3000
-app.listen(port)
+// let port = process.env.PORT || 3000
+// app.listen(port)
 
-console.log('App listening on port:' + port)
+// console.log('App listening on port:' + port)
 
 module.exports = app
