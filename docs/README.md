@@ -6,7 +6,7 @@
 
 **[仓库地址](https://github.com/zlv2s/node-server)**
 
-**[Demo](https://nodespider-api.herokuapp.com/)**
+**[线上地址](https://nodespider-api.herokuapp.com/)**
 
 ### 环境要求
 
