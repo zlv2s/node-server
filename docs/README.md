@@ -26,7 +26,6 @@ $ node app.js
 
 浏览器打开`http://localhost:3000/docs` 可以查看所有接口文档
 
-
 **接口文件**
 
 ```txt
@@ -100,38 +99,38 @@ function httpGet(host, data, path, status) {
     host: host,
     port: 80,
     path: path + querystring.stringify(data),
-    method: 'GET',
+    method: "GET",
     encoding: null,
     headers: {
-      'Content-Type': 'application/json',
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36'
+      "Content-Type": "application/json",
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36"
     }
-  }
+  };
   //判断是否为https请求
   if (status) {
-    http = require('https')
-    options.port = 443
+    http = require("https");
+    options.port = 443;
   }
 
   return new Promise(function(resolve, reject) {
-    let body = ''
+    let body = "";
     let get_req = http.request(options, function(response) {
       //response.setEncoding('utf8');
-      response.on('data', function(chunk) {
-        body += chunk
-      })
+      response.on("data", function(chunk) {
+        body += chunk;
+      });
 
-      response.on('end', () => {
-        resolve(body)
-      })
+      response.on("end", () => {
+        resolve(body);
+      });
 
-      response.on('error', err => {
-        reject(err)
-      })
-    })
-    get_req.end()
-  })
+      response.on("error", err => {
+        reject(err);
+      });
+    });
+    get_req.end();
+  });
 }
 ```
 
@@ -147,44 +146,44 @@ function httpGet(host, data, path, status) {
  * @returns
  */
 function httpPost(host, data, path, status) {
-  var data = querystring.stringify(data)
+  var data = querystring.stringify(data);
   var options = {
     host: host,
-    port: '80',
+    port: "80",
     path: path,
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'User-Agent':
-        'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36',
-      'Content-Length': Buffer.byteLength(data) //返回字符串实际占据的字节长度
+      "Content-Type": "application/x-www-form-urlencoded",
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36",
+      "Content-Length": Buffer.byteLength(data) //返回字符串实际占据的字节长度
     }
-  }
+  };
   //判断是否为https请求
   if (status) {
-    http = require('https')
-    options.port = 443
+    http = require("https");
+    options.port = 443;
   }
   return new Promise(function(resolve, reject) {
-    let body = ''
+    let body = "";
     let post_req = http.request(options, function(response) {
       //console.log(response.statusCode);
-      response.on('data', function(chunk) {
-        body += chunk
-      })
+      response.on("data", function(chunk) {
+        body += chunk;
+      });
 
-      response.on('end', () => {
-        resolve(body)
-      })
+      response.on("end", () => {
+        resolve(body);
+      });
 
-      response.on('error', err => {
-        reject(err)
-      })
-    })
+      response.on("error", err => {
+        reject(err);
+      });
+    });
 
-    post_req.write(data)
-    post_req.end()
-  })
+    post_req.write(data);
+    post_req.end();
+  });
 }
 ```
 
@@ -200,8 +199,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/daily_list`
 
-
-
 #### 1.2 单日日报内容
 
 **必选参数:** 日期 `id`
@@ -209,8 +206,6 @@ function httpPost(host, data, path, status) {
 **接口地址:** `api/daily_info/:id`
 
 **调用例子:** `http://localhost:3000/api/daily_info/20190717`
-
-
 
 #### 1.3 前端框架 top 100
 
@@ -221,8 +216,6 @@ function httpPost(host, data, path, status) {
 **接口地址:** `api/web_frame`
 
 **调用例子:** `http://localhost:3000/api/web_frame`
-
-
 
 ### 2.笑话段子搞笑图片
 
@@ -238,7 +231,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/joke_list/1`
 
-
 #### 2.2 段子图片
 
 > 每天返回 20 条最新数据
@@ -248,8 +240,6 @@ function httpPost(host, data, path, status) {
 **接口地址:** `/api/joke_img/`
 
 **调用例子:** `http://localhost:3000/api/joke_img`
-
-
 
 #### 2.3 搞笑图片
 
@@ -261,8 +251,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/joke_photo/1`
 
-
-
 ### 3. 新闻资讯
 
 > 新闻列表、新闻视频、新闻详情
@@ -272,7 +260,6 @@ function httpPost(host, data, path, status) {
 > 新闻列表
 
 **必选参数:** `type` 新闻类型
-
 
   <table>
   <tr>
@@ -304,8 +291,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/news_list/1`
 
-
-
 #### 3.2 新闻详情
 
 > 每页返回 10 条最新数据
@@ -315,8 +300,6 @@ function httpPost(host, data, path, status) {
 **接口地址:** `/api/news_detail/:item_id`
 
 **调用例子:** `http://localhost:3000/api/news_detail/6714600693883208206`
-
-
 
 #### 3.3 视频数据
 
@@ -349,7 +332,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/video_list/1/0`
 
-
 #### 3.4 知乎新闻
 
 **必选参数:** `无`
@@ -366,7 +348,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/zhihu_news_detail/9713459`
 
-
 ### 4.kugou 音乐 wap 端接口
 
 > 音乐新歌榜单、音乐歌单、排行榜、音乐详情、歌词、搜索、歌手信息、详细可看源代码 `api/music`
@@ -379,8 +360,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/new_songs`
 
-
-
 #### 4.2 音乐歌单
 
 **必选参数:** `无`
@@ -388,7 +367,6 @@ function httpPost(host, data, path, status) {
 **接口地址:** `api/plist/`
 
 **调用例子:** `http://localhost:3000/api/plist/`
-
 
 #### 4.3 音乐歌单下的音乐列表
 
@@ -398,8 +376,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/plist_songs/125032`
 
-
-
 #### 4.4 音乐排行榜
 
 **必选参数:** `无`
@@ -407,7 +383,6 @@ function httpPost(host, data, path, status) {
 **接口地址:** `api/rank_list/`
 
 **调用例子:** `http://localhost:3000/api/rank_list/`
-
 
 #### 4.5 排行版分类歌曲列表
 
@@ -417,7 +392,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/rank_list_info/8888`
 
-
 #### 4.6 歌手分类
 
 **必选参数:** `无`
@@ -425,7 +399,6 @@ function httpPost(host, data, path, status) {
 **接口地址:** `api/singer_classify/`
 
 **调用例子:** `http://localhost:3000/api/singer_classify`
-
 
 #### 4.7 歌手分类下面的歌手列表
 
@@ -435,7 +408,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/singer_list/88`
 
-
 #### 4.8 歌手信息
 
 **必选参数:** `singerid` 3060
@@ -444,8 +416,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/singer_info/3060`
 
-
-
 #### 4.9 歌曲音乐详情
 
 **必选参数:** `hash` CB7EE97F4CC11C4EA7A1FA4B516A5D97
@@ -453,7 +423,6 @@ function httpPost(host, data, path, status) {
 **接口地址:** `api/song_info/:hash`
 
 **调用例子:** `http://localhost:3000/api/song_info/CB7EE97F4CC11C4EA7A1FA4B516A5D97`
-
 
 #### 4.10 歌曲音乐歌词
 
@@ -487,7 +456,6 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/job_list/深圳/前端开发/1`
 
-
 #### 5.2 职位详情
 
 **必选参数:** `positionId` : 职位 id
@@ -496,7 +464,7 @@ function httpPost(host, data, path, status) {
 
 **调用例子:** `http://localhost:3000/api/job_info/3844372`
 
-### 6.QQ音乐
+### 6.QQ 音乐
 
 #### 6.1 推荐列表
 
@@ -514,8 +482,7 @@ function httpPost(host, data, path, status) {
 
 **调用例子：** `http://localhost:3000/api/qq_music/song_info/001G5IgY2gHy1T`
 
-
-### 7.echo回声
+### 7.echo 回声
 
 #### 7.1 歌曲详情
 
@@ -524,3 +491,13 @@ function httpPost(host, data, path, status) {
 **接口地址：** `/api/echo/:id`
 
 **调用例子：** `http://localhost:3000/api/echo/784547`
+
+### 8.FR24
+
+#### 7.1 航班 id
+
+**必选参数：** `航班号`
+
+**接口地址：** `/api/flt/getFltId/:fnum`
+
+**调用例子：** `http://localhost:3000/api/flt/getFltId/ca4115`
